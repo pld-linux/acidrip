@@ -16,7 +16,6 @@ Source1:	%{name}.desktop
 # icon taken from gnome-gorilla theme and a little bit modificated
 Source2:	%{name}.png
 URL:		http://acidrip.thirtythreeandathird.net/
-BuildRequires:	perl-ExtUtils-MakeMaker
 BuildRequires:	perl-Gtk2 >= 0.98
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -58,6 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGELOG TODO
 %attr(755,root,root) %{_bindir}/*
+%dir %{perl_vendorlib}/AcidRip
 %{perl_vendorlib}/AcidRip/*.pm
 %{_desktopdir}/*.desktop
 %{_pixmapsdir}/*.png
