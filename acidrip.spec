@@ -3,7 +3,7 @@ Summary:	Graphical frontend for MPlayer/Mencoder for DVD ripping
 Summary(pl):	Graficzna nak³adka na MPlayer/Mencoder do zgrywania DVD
 Name:		acidrip
 Version:	0.12
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		X11/Applications/Multimedia
 Source0:	http://dl.sourceforge.net/acidrip/%{name}-%{version}.tar.gz
