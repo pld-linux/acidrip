@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=AcidRip
+Comment=DVD ripper and encoder
+Comment[pl]=Zgrywacz i dekoder DVD
+Exec=acidrip
+Terminal=false
+Type=Application
+Categories=Utility
+Encoding=UTF-8
+# vi: encoding=utf-8
