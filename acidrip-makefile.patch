@@ -1,14 +1,13 @@
-diff -urN acidrip-0.11/Makefile.PL acidrip-0.11-makefile.patch/Makefile.PL
---- acidrip-0.11/Makefile.PL	2003-10-23 14:54:13.000000000 +0200
-+++ acidrip-0.11-makefile.patch/Makefile.PL	2003-12-26 22:45:46.000000000 +0100
-@@ -86,44 +86,44 @@
+--- acidrip-0.12/Makefile.PL.orig	2004-01-25 23:31:21.000000000 +0100
++++ acidrip-0.12/Makefile.PL	2004-01-25 23:32:39.000000000 +0100
+@@ -36,47 +36,47 @@
      $_;
  }
  
 -print "\nRunning additional test to be sure acidrip will work\n";
 +#print "\nRunning additional test to be sure acidrip will work\n";
  
--print "test for lsdvd (>=0.9): "; 
+-print "test for lsdvd: "; 
 -my $lsdvd = `lsdvd -V 2>&1`;
 -if ( $lsdvd !~ /0.(\d+)\s/ ) {
 -die "Not Found!\n\n***************\n" . 
@@ -42,7 +41,7 @@ diff -urN acidrip-0.11/Makefile.PL acidrip-0.11-makefile.patch/Makefile.PL
 -  "If you DO want MP3 support you'll need to recompile mplayer with mp3 support\n" .
 -  "See INSTALL or INSTALL.html for more information\n" .
 -  "***************\n\n" if ( system "mencoder -oac help 2> /dev/null | grep mp3lame > /dev/null" ); print "found\n";
-+#print "test for lsdvd (>=0.9): "; 
++#print "test for lsdvd: "; 
 +#my $lsdvd = `lsdvd -V 2>&1`;
 +#if ( $lsdvd !~ /0.(\d+)\s/ ) {
 +#die "Not Found!\n\n***************\n" . 
@@ -58,7 +57,7 @@ diff -urN acidrip-0.11/Makefile.PL acidrip-0.11-makefile.patch/Makefile.PL
 +#  "***************\n\n"
 +#}
 +#print "found\n";
-+
++#
 +#print "test for MPlayer: "; die "Not Found!\n\n***************\n" .
 +#  "AcidRip is based around the MPlayer video player. it has not been found on\n" .
 +#  "your current path. Install it from http://mplayerhq/hu see INSTALL.html or\n" .
@@ -80,5 +79,10 @@ diff -urN acidrip-0.11/Makefile.PL acidrip-0.11-makefile.patch/Makefile.PL
 -print "Everything looks good here...\n"; 
 +#print "Everything looks good here...\n"; 
  
- print "\nPlease send any feedback to me, I *Really* want to know what you think of it.\nMaybe then I can make it suck less. acid_kewpie\@users.sourceforge.net\n\n"; 
+-print "\nPlease send any feedback to me, I actually do want to know what you think of it.";
+-print "\nMaybe then I can make it suck less. acid_kewpie\@users.sourceforge.net\n\n"; 
++#print "\nPlease send any feedback to me, I actually do want to know what you think of it.";
++#print "\nMaybe then I can make it suck less. acid_kewpie\@users.sourceforge.net\n\n"; 
+ 
  exit(0);
+ 
