@@ -1,4 +1,4 @@
-%include        /usr/lib/rpm/macros.perl
+%include	/usr/lib/rpm/macros.perl
 Summary:	Graphical frontend for MPlayer/Mencoder for DVD ripping
 Summary(pl):	Graficzna nak³adka na MPlayer/Mencoder do zgrywania DVD
 Name:		acidrip
@@ -42,10 +42,10 @@ MEncodera, która automatyzuje ten proces na kilka sposobów:
 
 %build
 %{__perl} Makefile.PL \
-        INSTALLDIRS=vendor
+	INSTALLDIRS=vendor
 
 %{__make} \
-        OPTIMIZE="%{rpmcflags}"
+	OPTIMIZE="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
