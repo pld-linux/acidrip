@@ -1,20 +1,15 @@
-# TODO:
-# - remove buildtime test for lsdvd/mplayer (major build issue)
-# - better descritions
-#
 %include        /usr/lib/rpm/macros.perl
 Summary:	Graphical frontend for MPlayer/Mencoder for DVD ripping
 Summary(pl):	Graficzna nak³adka na MPlayer/Mencoder do zgrywania DVD
 Name:		acidrip
 Version:	0.11
-Release:	0.1
+Release:	1
 License:	GPL/Artistic
 Group:		X11/Applications/Multimedia
 Source0:	http://dl.sourceforge.net/acidrip/%{name}-%{version}.tar.gz
 # Source0-md5:	1a06fb89a4ac2486b9a2f192afb49386
 Source1:	%{name}.desktop
-# icon taken from gnome-gorilla theme and a little bit modificated
-Source2:	%{name}.png
+Patch0:		%{name}-makefile.patch
 URL:		http://acidrip.thirtythreeandathird.net/
 BuildRequires:	perl-Gtk2 >= 0.98
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -24,14 +19,26 @@ Requires:	mplayer
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-AcidRip is a Gtk2-perl application for ripping and encoding DVD's.
+AcidRip is a Gtk2-perl application for ripping and encoding DVD's. It
+is Graphical wraper to MPlayer and MEncoder which automates the
+process in a number of ways:
+- finds longest title
+- calculate video bitrate for given filesize
+- finds black bands and crops them
+- gives sugesstions for improved performance
 
 %description -l pl
-AcidRip jest aplikacj± opart± o Gtk2-perl s³u¿±c± do zgrywania
-i odkodowywania p³yt DVD.
+AcidRip jest aplikacj± opart± o Gtk2-perl s³u¿±c± do zgrywania i
+odkodowywania p³yt DVD. Jest to graficzna nak³adka na MPlayera i
+MEncodera, która automatyzuje ten proces na kilka sposobów:
+- znajduje najd³u¿szy tytu³
+- oblicza transfer wideo dla danej wielko¶ci pliku
+- znajduje i przycina czarne opaski
+- podaje propozycje dla zwiekszenia wydajno¶ci
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \
@@ -42,13 +49,12 @@ i odkodowywania p³yt DVD.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT%{_desktopdir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 install -c %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
-install -c %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -60,5 +66,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorlib}/AcidRip
 %{perl_vendorlib}/AcidRip/*.pm
 %{_desktopdir}/*.desktop
-%{_pixmapsdir}/*.png
 %{_mandir}/man1/*
