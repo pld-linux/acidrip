@@ -34,7 +34,7 @@ MEncodera, która automatyzuje ten proces na kilka sposobów:
 - znajduje najd³u¿szy tytu³
 - oblicza transfer wideo dla danej wielko¶ci pliku
 - znajduje i przycina czarne opaski
-- podaje propozycje dla zwiekszenia wydajno¶ci
+- podaje propozycje dla zwiêkszenia wydajno¶ci
 
 %prep
 %setup -q
