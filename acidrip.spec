@@ -2,19 +2,19 @@
 Summary:	Graphical frontend for MPlayer/Mencoder for DVD ripping
 Summary(pl):	Graficzna nak³adka na MPlayer/Mencoder do zgrywania DVD
 Name:		acidrip
-Version:	0.11
+Version:	0.12
 Release:	1
 License:	GPL/Artistic
 Group:		X11/Applications/Multimedia
 Source0:	http://dl.sourceforge.net/acidrip/%{name}-%{version}.tar.gz
-# Source0-md5:	1a06fb89a4ac2486b9a2f192afb49386
+# Source0-md5:	efa9d7b1c5d7c0f72b33c3d88012e81c
 Source1:	%{name}.desktop
 Patch0:		%{name}-makefile.patch
 URL:		http://acidrip.thirtythreeandathird.net/
 BuildRequires:	perl-Gtk2 >= 0.98
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-Requires:	lsdvd >= 0.9
+Requires:	lsdvd >= 0.10
 Requires:	mplayer
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
