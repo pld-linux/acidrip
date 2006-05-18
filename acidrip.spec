@@ -10,7 +10,7 @@ Source0:	http://dl.sourceforge.net/acidrip/%{name}-%{version}.tar.gz
 # Source0-md5:	c1c27bbf658e5c30f43e067a8ae283de
 Source1:	%{name}.desktop
 Patch0:		%{name}-makefile.patch
-URL:		http://acidrip.thirtythreeandathird.net/
+URL:		http://untrepid.com/acidrip/
 BuildRequires:	perl-Gtk2 >= 0.98
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
