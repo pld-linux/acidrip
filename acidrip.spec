@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Graphical frontend for MPlayer/Mencoder for DVD ripping
-Summary(pl):	Graficzna nak≥adka na MPlayer/Mencoder do zgrywania DVD
+Summary(pl.UTF-8):   Graficzna nak≈Çadka na MPlayer/Mencoder do zgrywania DVD
 Name:		acidrip
 Version:	0.14
 Release:	1
@@ -27,14 +27,14 @@ process in a number of ways:
 - finds black bands and crops them
 - gives sugesstions for improved performance
 
-%description -l pl
-AcidRip jest aplikacj± opart± o Gtk2-perl s≥uø±c± do zgrywania i
-odkodowywania p≥yt DVD. Jest to graficzna nak≥adka na MPlayera i
-MEncodera, ktÛra automatyzuje ten proces na kilka sposobÛw:
-- znajduje najd≥uøszy tytu≥
-- oblicza transfer wideo dla danej wielko∂ci pliku
+%description -l pl.UTF-8
+AcidRip jest aplikacjƒÖ opartƒÖ o Gtk2-perl s≈Çu≈ºƒÖcƒÖ do zgrywania i
+odkodowywania p≈Çyt DVD. Jest to graficzna nak≈Çadka na MPlayera i
+MEncodera, kt√≥ra automatyzuje ten proces na kilka sposob√≥w:
+- znajduje najd≈Çu≈ºszy tytu≈Ç
+- oblicza transfer wideo dla danej wielko≈õci pliku
 - znajduje i przycina czarne opaski
-- podaje propozycje dla zwiÍkszenia wydajno∂ci
+- podaje propozycje dla zwiƒôkszenia wydajno≈õci
 
 %prep
 %setup -q
