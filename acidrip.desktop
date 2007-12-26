@@ -6,5 +6,4 @@ Exec=acidrip
 Terminal=false
 Type=Application
 Categories=GTK;Utility;
-Encoding=UTF-8
 # vi: encoding=utf-8
