@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.perl
 Summary:	Graphical frontend for MPlayer/Mencoder for DVD ripping
 Summary(pl.UTF-8):	Graficzna nakładka na MPlayer/Mencoder do zgrywania DVD
 Name:		acidrip
