@@ -37,7 +37,7 @@ MEncodera, która automatyzuje ten proces na kilka sposobów:
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__perl} Makefile.PL \
